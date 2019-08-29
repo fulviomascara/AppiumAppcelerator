@@ -11,6 +11,7 @@ npm install'''
     stage('Test') {
       steps {
         sh '''cd TestAppiumDir
+apk add nodejs
 npm test'''
       }
     }
