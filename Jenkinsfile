@@ -5,12 +5,6 @@ pipeline {
 
   stages {
 
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/fulviomascara/AppiumAppcelerator'
-      }
-    }
-
     stage('Install dependencies') {
       steps {
         sh 'npm install'
