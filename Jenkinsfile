@@ -12,6 +12,8 @@ npm install'''
     stage('Test') {
       steps {
         sh '''cd TestAppiumDir
+appium &
+sleep 5s
 npm test'''
       }
     }
