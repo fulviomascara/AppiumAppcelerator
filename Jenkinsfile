@@ -3,15 +3,15 @@ pipeline {
   stages {
     stage('Install dependencies') {
       steps {
-        sh 'apk add nodejs'
-        sh 'echo $PATH'
-        sh 'npm install'
+        sh '''apk add nodejs
+echo $PATH
+cd TestAppiuDir
+npm install'''
       }
     }
     stage('Test') {
       steps {
-        sh '''cd TestAppiumDir
-npm test'''
+        sh 'npm test'
       }
     }
   }
