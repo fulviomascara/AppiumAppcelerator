@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  
-  tools {nodejs "node"}
-  
   stages {
     stage('Install dependencies') {
       steps {
@@ -13,9 +10,12 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'cd TestAppiumDir'
-        sh 'npm test'
+        sh '''cd TestAppiumDir
+npm test'''
       }
     }
+  }
+  tools {
+    nodejs 'node'
   }
 }
