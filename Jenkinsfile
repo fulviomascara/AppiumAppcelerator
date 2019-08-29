@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''apk add nodejs
 echo $PATH
-cd TestAppiuDir
+cd TestAppiumDir
 npm install'''
       }
     }
