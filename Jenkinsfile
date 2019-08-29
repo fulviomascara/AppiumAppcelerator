@@ -6,16 +6,14 @@ pipeline {
         sh '''apk add nodejs
 echo $PATH
 cd TestAppiumDir
-npm install
-#!/bin/bash --login -x
-appium &
-'''
+npm install'''
       }
     }
     stage('Test') {
       steps {
-        sh '''cd TestAppiumDir
-sleep 5s
+        sh '''#!/bin/bash --login -x
+appium &
+cd TestAppiumDir
 npm test'''
       }
     }
