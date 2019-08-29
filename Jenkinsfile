@@ -11,8 +11,9 @@ npm install'''
     }
     stage('Test') {
       steps {
-        sh '''./node_modules/.bin/appium
-cd TestAppiumDir
+        sh '''cd TestAppiumDir
+./node_modules/.bin/appium &
+sleep 10s
 npm test'''
       }
     }
