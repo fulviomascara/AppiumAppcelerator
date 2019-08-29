@@ -10,8 +10,7 @@ npm install'''
     }
     stage('Test') {
       steps {
-        sh '''#!/bin/bash
-cd TestAppiumDir
+        sh '''cd TestAppiumDir
 npm test'''
       }
     }
