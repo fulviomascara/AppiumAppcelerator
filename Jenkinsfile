@@ -15,7 +15,4 @@ npm test'''
       }
     }
   }
-  tools {
-    nodejs 'node'
-  }
 }
