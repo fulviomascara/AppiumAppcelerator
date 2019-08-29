@@ -11,7 +11,7 @@ npm install'''
     }
     stage('Test') {
       steps {
-        sh '''#!/bin/bash --login -x
+        sh '''#!/bin/bash
 appium &
 cd TestAppiumDir
 npm test'''
