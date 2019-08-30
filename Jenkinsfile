@@ -12,6 +12,7 @@ npm install'''
     stage('Test') {
       steps {
         sh '''cd TestAppiumDir
+chmod 755 appium 
 ./appium &
 sleep 10s
 npm test'''
